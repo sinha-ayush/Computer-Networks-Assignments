@@ -1,7 +1,7 @@
 # Computer-Networks-Assignments
 <center>
-Implementations of standard communication protocols of the TCP/IP networking model for any generic POSIX compliant (present on same or different collision domains/brodcast domains).
-<br>
+Implementations of <b>standard communication protocols</b> of the <b>TCP/IP</b> networking model for any <b>generic POSIX compliant</b> (present on same or different collision domains/brodcast domains) in c.
+<br/><br/>
 </center>
-Author: Ayush Kumar Sinha
+<strong>Author: Ayush Kumar Sinha</strong>
 
