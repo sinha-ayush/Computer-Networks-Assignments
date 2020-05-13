@@ -6,7 +6,7 @@
 #include <arpa/inet.h>
 #include <errno.h>
 
-#define receiverPort 2015
+#define receiverPort 2016
 
 int main(void){
     printf("Receiver Started \n");
@@ -28,10 +28,8 @@ int main(void){
     if(newSocket<0) 
     perror("ACCEPTING FAILED :: ");
 
-    char response[200];
-    
-    while (1){
-    
+    char response[5];
+
     recv(newSocket , response , 5 , 0 );
     printf("%s\n",response);
     
@@ -40,6 +38,5 @@ int main(void){
     perror("THE ISSUE IS :: ");
 
     printf("\n");   
-    }
     return 0;
 }

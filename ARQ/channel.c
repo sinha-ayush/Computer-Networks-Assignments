@@ -6,8 +6,8 @@
 #include <arpa/inet.h>
 #include <errno.h>
 
-#define receiverPort 2015
-#define channelPort 1975
+#define receiverPort 2016
+#define channelPort 1976
 
 int main(void){
     printf("Channel Started \n");
@@ -41,22 +41,11 @@ int main(void){
     if(connectionSocket<0) 
     printf("CHANNEL NOT CONNECTED");    
 
-    
-    while (1){
+    char response[5];
 
-    char response[6];
-    printf("Channel Started \n");
     if(recv(newSocket , response , 5 , 0 )<0)
     perror("THE ISSUE IS :: ");
     else printf("DATA RECEIVED  :: %s\n",response);
-    // int k = strlen(response);
-    // int r = rand() % k;
-    // printf("INDUCING BIT ERROR AT POSITION %d\n",r+1);
-    // response[r] = (response[r]=='1')?'0':'1';     
-    // printf("NEW RESPONSE %s\n",response);
-
-    // printf("ADDING %d SECONDS DELAY\n",r);
-    // sleep(r);
     
     if(send(receiverSocket , response , 5 , 0 )<0)
     perror("THE ISSUE IS :: ");
@@ -67,10 +56,6 @@ int main(void){
     if(send(newSocket , response , 5 , 0 )<0)
     perror("THE ISSUE IS :: ");
     printf("%s\n",response);
-
-    printf("\n");
-    }
-
 
     return 0;
 }
