@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "errno.h": "c",
+        "socket.h": "c",
+        "struct_iovec.h": "c",
+        "unistd.h": "c",
+        "string.h": "c",
+        "inet.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}
